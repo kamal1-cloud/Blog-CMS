@@ -41,7 +41,7 @@
                                 <a href="posts.php">View All Posts</a>
                             </li>
                             <li>
-                                <a href="#">Add New Post</a>
+                                <a href="posts.php?opt=add_post">Add New Post</a>
                             </li>
                         </ul>
                     </li>
@@ -50,7 +50,7 @@
                         <a href="./categories.php"><i class="fa fa-fw fa-desktop"></i> Categories</a>
                     </li>
                     <li>
-                        <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Comment</a>
+                        <a href="./comments.php"><i class="fa fa-fw fa-wrench"></i> Comment</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users<i class="fa fa-fw fa-caret-down"></i></a>

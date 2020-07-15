@@ -35,7 +35,7 @@
                             require_once('includes/edit_post.php');
                             break;
                             default:
-                            require_once('includes/view_all_posts.php');
+                            require_once('includes/view_all_comments.php');
                         break;
 
                     }

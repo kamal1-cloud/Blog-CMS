@@ -1,24 +1,3 @@
-<!-- 
-
-// $user = 'root';
-// $password = 'root';
-// $db = 'cms_N';
-// $host = 'localhost';
-// $port = 3307;
-
-// $link = mysqli_connect(
-//    "$host:$port", 
-//    $user, 
-//    $password
-// );
-// $db_selected = mysqli_select_db(
-//    $db, 
-//    $link
-// );
-
-// if(!$link){
-//         die("Not connect");
-//     } -->
 
 <?php
 $servername = "localhost";

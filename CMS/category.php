@@ -11,18 +11,23 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
             <?php
-            $query = "SELECT * FROM posts where post_status = 'published'";
+                
+                if(isset($_GET['category']))
+                {
+                   $Category_ID = $_GET['category'];
+                }
+
+
+            $query = "SELECT * FROM posts where post_cat_id ='$Category_ID'";
             $data = mysqli_query($conn, $query);
-               
+
             while ($row = mysqli_fetch_assoc($data)) {
-                $post_id = $row['post_id'];
                 $post_title = $row['post_title'];
                 $post_author = $row['post_author'];
                 $post_date = $row['post_date'];
                 $post_img = $row['post_img'];
                 $post_content = $row['post_content'];
                 $post_tags = $row['post_tags'];
-                $post_status = $row['post_status'];
 
 
             ?>
@@ -32,9 +37,8 @@
                 </h1>
 
                 <!-- First Blog Post -->
-            
-                <h2> 
-                    <a href="post.php?p_id=<?php echo $post_id; ?>"><?php echo $post_title ?></a>
+                <h2>
+                    <a href="#"><?php echo $post_title ?></a>
                 </h2>
                 <p class="lead">
                     by <a href="index.php"><?php echo $post_author ?></a>
@@ -51,10 +55,6 @@
 
             <?php
             }
-            if($post_status !== 'published')
-            {
-                echo '<div class="alert alert-danger"> Post Not Found</div>';
-            }
             ?>
         </div>
         <!-- Blog Sidebar Widgets Column -->
@@ -64,4 +64,4 @@
         <hr>
 
         <!-- Footer -->
-        <?php require_once "./includes/footer.php" ?> 
+        <?php require_once "./includes/footer.php" ?>
